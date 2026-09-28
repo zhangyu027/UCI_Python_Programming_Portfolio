@@ -1,35 +1,19 @@
-# UCI 427.62 Python for Data Analysis — Updated Teaching Repo
+# Repo Review Notes — UCI Intro Python Analytics
 
-This package has been refreshed so students can run the course materials from the repository folder without editing old instructor-specific local paths.
+## What was updated
+- Converted notebook dataset references from old absolute paths to relative paths under `Data/`.
+- Added missing datasets used by class notebooks: `LaborSheetData.csv` and `724080-13739-2001`.
+- Added simplified dataset aliases used by teaching notebooks.
+- Added `DATASET_INVENTORY.csv`, `Updated_Homework_Codebook.md`, `.gitignore`, and `requirements.txt`.
+- Rewrote the root `README.md` for GitHub/course reuse.
 
-## Recommended setup
+## Key course-setting suggestions
+1. Standardize every assignment around a reproducible notebook: restart kernel, run all cells, submit notebook.
+2. Use relative file paths only; this prevents student confusion and grading errors.
+3. Add a small interpretation requirement to every homework so students connect Python output to business meaning.
+4. Keep starter notebooks separate from answer notebooks.
+5. Add an end-of-course mini-project: data loading, cleaning, groupby, chart, and 5-sentence business recommendation.
+6. Consider a simple grading checklist to reduce email back-and-forth.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-jupyter lab
-```
-
-Open notebooks from the repo root or from the `Assignments/` and `In-Class Practice/` folders. Dataset paths now point to `../Data/...`.
-
-## Folder guide
-
-- `Assignments/` — homework notebooks, assignment PDFs, and supporting scripts.
-- `In-Class Practice/` — guided practice notebooks by module/week.
-- `Data/` — cleaned teaching datasets and `DATASET_INVENTORY.csv`.
-- `Slides/` — lecture slides and exported PDFs.
-- `Syllabus/` — syllabus and grading reference materials.
-- `Other Materials/` — supporting KPI/business reading materials.
-
-## 2026 refresh notes
-
-- Replaced hard-coded local file paths with relative repo paths.
-- Added missing sample datasets used by date/groupby/plotting notebooks.
-- Added a dataset inventory and homework codebook for easier course management.
-- Added `.gitignore` and `requirements.txt` for GitHub readiness.
-- Cleaned Mac metadata files from the working package.
-
-## Instructor notes
-
-For an introductory analytics class, keep grading focused on reproducible notebooks, correct use of pandas, clear interpretation, and simple business communication. Avoid making deployment, package management, or advanced ML the center of the course unless those topics are explicitly part of the learning outcomes.
+## Caution
+Some PDFs/slides are original legacy materials and were not rewritten. The most important functional improvement was making notebooks and datasets portable for GitHub/course distribution.
